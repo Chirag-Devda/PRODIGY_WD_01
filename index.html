@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link href="css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg" />
+    <!-- google fonts -->
+  </head>
+  <body>
+    <header class="h-[74px] bg-primaryblue text-white">
+      <!-- Navbar -->
+      <nav
+        class="container px-5 mx-auto flex items-center justify-between h-full"
+      >
+        <!-- logo -->
+        <div class="flex items-center gap-2">
+          <img src="favicon.svg" alt="icons" class="h-14" />
+          <div>
+            <p class="text-lg font-Merriweather font-[700]">PRODIGY</p>
+            <p class="text-lg font-Merriweather font-[700]">INFOTECH</p>
+          </div>
+        </div>
+
+        <!-- links -->
+        <ul class="lg:flex hidden space-x-10 font-Merriweather font-[700]">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#internships">Intern Playground</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#verify">Verify</a></li>
+        </ul>
+
+        <!-- bars -->
+        <div id="openbar" class="lg:hidden">
+          <img src="icons/openbars.svg" alt="icon-bar" class="size-8" />
+        </div>
+
+        <!-- Drawer -->
+        <div id="drawer" class="shadow-xl closedrawer md:w-[50vw] w-[70vw]">
+          <div id="closebar" class="flex justify-end">
+            <img src="icons/closebar.svg" alt="closebar" class="size-8" />
+          </div>
+          <div class="flex items-center mt-5 gap-2">
+            <img src="favicon.svg" alt="icons" class="h-14" />
+            <div>
+              <p class="text-base font-Merriweather font-[700]">PRODIGY</p>
+              <p class="text-base font-Merriweather font-[700]">INFOTECH</p>
+            </div>
+          </div>
+          <ul
+            class="flex flex-col items-center mt-10 space-y-5 font-Merriweather font-[700]"
+          >
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#verify">Verify</a></li>
+            <li>
+              <a href="#internships">Intern Playground</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <script src="js/style.js"></script>
+  </body>
+</html>
