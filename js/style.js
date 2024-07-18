@@ -1,12 +1,20 @@
 const opendrawer = document.body.querySelector("#openbar");
 const closedrawer = document.body.querySelector("#closebar");
 const drawer = document.body.querySelector("#drawer");
+const home_logo = document.body.querySelector("#home_logo");
 
-closedrawer.addEventListener("click", () => {
-  drawer.classList.add("closedrawer");
-  drawer.classList.remove("opendrawer");
+function toggleDrawer() {
+  drawer.classList.toggle("closedrawer");
+  drawer.classList.toggle("opendrawer");
+}
+
+closedrawer.addEventListener("click", toggleDrawer);
+opendrawer.addEventListener("click", toggleDrawer);
+
+home_logo.addEventListener("mouseover", () => {
+  home_logo.classList.add("animate__animated", "animate__bounce");
 });
-opendrawer.addEventListener("click", () => {
-  drawer.classList.add("opendrawer");
-  drawer.classList.remove("closedrawer");
+
+home_logo.addEventListener("mouseout", () => {
+  home_logo.classList.remove("animate__animated", "animate__bounce");
 });

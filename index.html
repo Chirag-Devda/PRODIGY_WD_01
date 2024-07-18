@@ -10,8 +10,43 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="favicon.svg" type="image/svg" />
     <!-- google fonts -->
+    <!-- Animatecss -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
+    <!-- Drawer -->
+    <div
+      id="drawer"
+      class="shadow-xl lg:hidden closedrawer md:w-[50vw] w-[70vw]"
+    >
+      <div id="closebar" class="flex cursor-pointer justify-end">
+        <img src="icons/closebar.svg" alt="closebar" class="size-8" />
+      </div>
+      <div class="flex items-center mt-5 gap-2">
+        <img src="favicon.svg" alt="icons" class="h-14" />
+        <div>
+          <p class="text-base font-Merriweather font-[700]">PRODIGY</p>
+          <p class="text-base font-Merriweather font-[700]">INFOTECH</p>
+        </div>
+      </div>
+      <ul
+        class="flex flex-col items-center mt-10 space-y-5 font-Merriweather font-[700]"
+      >
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#verify">Verify</a></li>
+        <li>
+          <a href="#internships">Intern Playground</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- header -->
     <header class="h-[74px] bg-primaryblue text-white">
       <!-- Navbar -->
       <nav
@@ -37,38 +72,48 @@
         </ul>
 
         <!-- bars -->
-        <div id="openbar" class="lg:hidden">
+        <div id="openbar" class="cursor-pointer lg:hidden">
           <img src="icons/openbars.svg" alt="icon-bar" class="size-8" />
-        </div>
-
-        <!-- Drawer -->
-        <div id="drawer" class="shadow-xl closedrawer md:w-[50vw] w-[70vw]">
-          <div id="closebar" class="flex justify-end">
-            <img src="icons/closebar.svg" alt="closebar" class="size-8" />
-          </div>
-          <div class="flex items-center mt-5 gap-2">
-            <img src="favicon.svg" alt="icons" class="h-14" />
-            <div>
-              <p class="text-base font-Merriweather font-[700]">PRODIGY</p>
-              <p class="text-base font-Merriweather font-[700]">INFOTECH</p>
-            </div>
-          </div>
-          <ul
-            class="flex flex-col items-center mt-10 space-y-5 font-Merriweather font-[700]"
-          >
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#verify">Verify</a></li>
-            <li>
-              <a href="#internships">Intern Playground</a>
-            </li>
-          </ul>
         </div>
       </nav>
     </header>
 
+    <!-- Home Section -->
+    <section id="#home" class="h-[calc(100vh-74px)]">
+      <div
+        class="container h-full flex-col items-center sm:flex-row flex mx-auto px-5"
+      >
+        <div class="sm:h-full sm:w-[50%] primaryblue">
+          <div class="relative mt-20">
+            <h1
+              class="lg:text-8xl sm:text-6xl text-5xl font-Merriweather animate__jackInTheBox animate__animated companyname1"
+            >
+              PRODIGY
+            </h1>
+            <h1
+              class="lg:text-8xl sm:text-6xl text-5xl font-Merriweather animate__animated animate__lightSpeedInLeft companyname2"
+            >
+              INFOTECH
+            </h1>
+          </div>
+          <div class="mt-10 font-BioRhyme text-lg lg:text-4xl">
+            <p>
+              Providing World Class E-Learning Experince with Real world
+              Internships
+            </p>
+          </div>
+        </div>
+        <div class="h-full flex w-screen sm:w-[50%]">
+          <div id="home_logo" class="sm:mt-20 lg:mt-10 w-full">
+            <img
+              src="images/logo.png"
+              alt="home_logo"
+              class="sm:m-0 sm:w-full mx-auto w-[70%]"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="js/style.js"></script>
   </body>
 </html>
