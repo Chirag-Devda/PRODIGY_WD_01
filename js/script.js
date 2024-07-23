@@ -73,6 +73,8 @@ const dropdown_Column_two_Array = [
   },
 ];
 
+// Generate FAQs Section with Array data
+
 function generateDropdownHTML(data) {
   let html = "";
   for (let item of data) {
@@ -104,3 +106,36 @@ container1.innerHTML = dropdown_Column_one_html;
 
 const container2 = document.getElementById("container-for-column-two");
 container2.innerHTML = dropdown_Column_two_html;
+
+// Contact form Handling
+
+let messages = []; // Array to store user data (form data objects)
+
+let contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  // Create an object to store form data
+  let formData = {
+    name: name,
+    email: email,
+    phone: phone,
+    message: message,
+  };
+
+  // Push the form data object to the messages array
+  messages.push(formData);
+  console.log(messages); // Check if data is stored correctly
+
+  //clear the form fields
+  contactForm.reset();
+
+  // Submission message
+  alert("Thank you for your submission!");
+});

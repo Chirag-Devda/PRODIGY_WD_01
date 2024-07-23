@@ -24,43 +24,33 @@
     />
   </head>
   <body>
-    <!-- Drawer -->
+    <!-- Drawer -->      
     <div
       id="drawer"
-      class="shadow-xl lg:hidden closedrawer md:w-[50vw] w-[70vw]"
+      class="shadow-xl lg:hidden px-10 md:w-[50vw] hidden bg-white fixed top-[74px] rounded-[21px] right-[11px] z-[11]"
     >
-      <div id="closebar" class="flex cursor-pointer justify-end">
-        <img src="icons/closebar.svg" alt="closebar" class="size-8" />
-      </div>
-      <div class="flex items-center mt-5 gap-2">
-        <img src="favicon.svg" alt="icons" class="h-14" />
-        <div>
-          <p class="text-base font-Merriweather font-[700]">PRODIGY</p>
-          <p class="text-base font-Merriweather font-[700]">INFOTECH</p>
-        </div>
-      </div>
       <ul
-        class="flex flex-col items-center mt-10 space-y-5 font-Merriweather font-[700]"
+        class="flex flex-col items-center my-5 space-y-5 font-Merriweather font-[700]"
       >
-        <li><a href="#home">Home</a></li>
+        <li><a class="drawer_list" href="#home">Home</a></li>
         <li>
-          <a href="#about">About</a>
+          <a class="drawer_list" href="#about">About</a>
         </li>
-        <li><a href="#faqs">FAQs</a></li>
+        <li><a class="drawer_list" href="#faqs">FAQs</a></li>
         <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="#verify">Verify</a>
+          <a class="drawer_list" href="#contact">Contact</a>
         </li>
         <li>
-          <a href="#internships">Intern Playground</a>
+          <a class="drawer_list" href="#verify">Verify</a>
+        </li>
+        <li>
+          <a class="drawer_list" href="#internships">Intern Playground</a>
         </li>
       </ul>
     </div>
 
     <!-- header -->
-    <header class="h-[74px] z-10 fixed w-full top-0 bg-primaryblue text-white">
+    <header class="h-[74px] z-10 fixed w-screen top-0 bg-primaryblue text-white">
       <!-- Navbar -->
       <nav
         class="container px-5 mx-auto flex items-center justify-between h-full"
@@ -81,21 +71,22 @@
           <li class="nav_list"><a href="#internships">Intern Playground</a></li>
           <li class="nav_list"><a href="#faqs">FAQs</a></li>
           <li class="nav_list"><a href="#contact">Contact</a></li>
-          <li class="nav_list"><a href="#verify">Verify</a></li>
         </ul>
 
-        <!-- bars -->
-        <div id="openbar" class="cursor-pointer lg:hidden">
-          <img src="icons/openbars.svg" alt="icon-bar" class="size-8" />
+        <!-- bar -->
+        <div id="bars" class="cursor-pointer lg:hidden">
+          <img id="bar" src="icons/openbars.svg" alt="icon-bar" class="size-8" />
         </div>
       </nav>
     </header>
 
     <!-- Home Section -->
-    <section id="home">
+    <section id="home" class="py-[120px]">
       <div
         class="container h-full flex-col items-center sm:flex-row flex mx-auto px-5"
       >
+
+      <!-- Company name animation -->
         <div class="sm:h-full sm:w-[50%] primaryblue">
           <div class="relative mt-20">
             <h1
@@ -116,12 +107,14 @@
             </p>
           </div>
         </div>
+
+        <!-- Home logo image -->
         <div class="h-full flex w-screen sm:w-[50%]">
-          <div id="home_logo" class="sm:mt-20 lg:mt-10 w-full">
+          <div id="home_logo" class="sm:mt-20 lg:mt-10 w-full flex justify-end">
             <img
               src="images/logo.png"
               alt="home_logo"
-              class="sm:m-0 sm:w-full mx-auto w-[70%]"
+              class="sm:m-0  mx-auto w-4/5"
             />
           </div>
         </div>
@@ -145,6 +138,7 @@
             class="h-[500px] object-fill w-full rounded-lg"
           />
         </div>
+
         <div class="mt-6 font-baloo-bhaijaan-2 p-5">
           <span class="text-2xl">
             At Prodigy Infotech, we're passionate about breaking down barriers
@@ -178,19 +172,21 @@
     <!-- Internship Section -->
     <section
       id="internships"
-      class="flex pt-[120px] pb-[90px] rounded-t-lg items-center"
+      class="flex pt-[120px] px-2 pb-[90px] rounded-t-lg items-center"
     >
       <div class="swiper_Container container swiper mySwiper">
         <div class="swiper-wrapper py-10 content">
+
+          <!--  Software Development Internship Card -->
           <div class="swiper-slide relative bg-white card">
             <div class="card-content">
               <div class="card_heading">
-                <h1 class="font-bold primaryblue text-3xl mb-10 text-center">
+                <h1 class="font-bold primaryblue text-[1.3rem] leading-[2.25rem] mb-10 text-center">
                   Software Development Internship
                 </h1>
               </div>
               <ul
-                class="card_list font-baloo-bhaijaan-2 text-xl text-gray-600 space-y-5"
+                class="card_list font-baloo-bhaijaan-2 leading-7 text-[1.10rem] text-gray-600 space-y-5"
               >
                 <li>Overview</li>
                 <li>Life Cycle</li>
@@ -200,7 +196,7 @@
               </ul>
               <div class="text-center">
                 <button
-                  class="font-semibold text-lg primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
+                  class="font-semibold leading-7 text-[1.10rem] primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
                 >
                   Apply Now
                 </button>
@@ -208,15 +204,16 @@
             </div>
           </div>
 
+          <!--  Web Dev Internship Card -->
           <div class="swiper-slide relative bg-white card">
             <div class="card-content">
               <div class="card_heading">
-                <h1 class="font-bold primaryblue text-3xl mb-10 text-center">
+                <h1 class="font-bold primaryblue text-[1.3rem] leading-[2.25rem] mb-10 text-center">
                   Web Dev Internship
                 </h1>
               </div>
               <ul
-                class="card_list font-baloo-bhaijaan-2 text-xl text-gray-600 space-y-5"
+                class="card_list font-baloo-bhaijaan-2 leading-7 text-[1.10rem] text-gray-600 space-y-5"
               >
                 <li>Overview</li>
                 <li>HTML5 & CSS3</li>
@@ -226,7 +223,7 @@
               </ul>
               <div class="text-center mt-12">
                 <button
-                  class="font-semibold text-lg primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
+                   class="font-semibold leading-7 text-[1.10rem] primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
                 >
                   Apply Now
                 </button>
@@ -234,15 +231,16 @@
             </div>
           </div>
 
+          <!-- Android Development Internship Card -->
           <div class="swiper-slide relative bg-white card">
             <div class="card-content">
               <div class="card_heading">
-                <h1 class="font-bold primaryblue text-3xl mb-10 text-center">
+                <h1 class="font-bold primaryblue text-[1.3rem] leading-[2.25rem] mb-10 text-center">
                   Android Development Internship
                 </h1>
               </div>
               <ul
-                class="card_list font-baloo-bhaijaan-2 text-xl text-gray-600 space-y-5"
+                class="card_list font-baloo-bhaijaan-2 leading-7 text-[1.10rem] text-gray-600 space-y-5"
               >
                 <li>Overview</li>
                 <li>Kotlin/Flutter/React Native</li>
@@ -252,7 +250,7 @@
               </ul>
               <div class="text-center">
                 <button
-                  class="font-semibold text-lg primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
+                   class="font-semibold leading-7 text-[1.10rem] primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
                 >
                   Apply Now
                 </button>
@@ -260,15 +258,16 @@
             </div>
           </div>
 
+          <!-- Machine Learning Internship Card -->
           <div class="swiper-slide relative bg-white card">
             <div class="card-content">
               <div class="card_heading">
-                <h1 class="font-bold primaryblue text-3xl mb-10 text-center">
+                <h1 class="font-bold primaryblue text-[1.3rem] leading-[2.25rem] mb-10 text-center">
                   Machine Learning Internship
                 </h1>
               </div>
               <ul
-                class="card_list font-baloo-bhaijaan-2 text-xl text-gray-600 space-y-5"
+                class="card_list font-baloo-bhaijaan-2 leading-7 text-[1.10rem] text-gray-600 space-y-5"
               >
                 <li>Overview</li>
                 <li>Data Analysis</li>
@@ -278,7 +277,7 @@
               </ul>
               <div class="text-center">
                 <button
-                  class="font-semibold text-lg primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
+                   class="font-semibold leading-7 text-[1.10rem] primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
                 >
                   Apply Now
                 </button>
@@ -286,15 +285,16 @@
             </div>
           </div>
 
+          <!-- Data Science Internship Card -->
           <div class="swiper-slide relative bg-white card">
             <div class="card-content">
               <div class="card_heading">
-                <h1 class="font-bold primaryblue text-3xl mb-10 text-center">
+                <h1 class="font-bold primaryblue text-[1.3rem] leading-[2.25rem] mb-10 text-center">
                   Data Science Internship
                 </h1>
               </div>
               <ul
-                class="card_list font-baloo-bhaijaan-2 text-xl text-gray-600 space-y-5"
+                class="card_list font-baloo-bhaijaan-2 leading-7 text-[1.10rem] text-gray-600 space-y-5"
               >
                 <li>Overview</li>
                 <li>EDA</li>
@@ -304,7 +304,7 @@
               </ul>
               <div class="text-center mt-12">
                 <button
-                  class="font-semibold text-lg primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
+                   class="font-semibold leading-7 text-[1.10rem] primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
                 >
                   Apply Now
                 </button>
@@ -312,15 +312,16 @@
             </div>
           </div>
 
+          <!-- Cyber Security Internship Card -->
           <div class="swiper-slide relative bg-white card">
             <div class="card-content">
               <div class="card_heading">
-                <h1 class="font-bold primaryblue text-3xl mb-10 text-center">
+                <h1 class="font-bold primaryblue text-[1.3rem] leading-[2.25rem] mb-10 text-center">
                   Cyber Security Internship
                 </h1>
               </div>
               <ul
-                class="card_list font-baloo-bhaijaan-2 text-xl text-gray-600 space-y-5"
+                class="card_list font-baloo-bhaijaan-2 leading-7 text-[1.10rem] text-gray-600 space-y-5"
               >
                 <li>Caesar Cipher</li>
                 <li>Pixel Manipulation</li>
@@ -330,7 +331,7 @@
               </ul>
               <div class="text-center">
                 <button
-                  class="font-semibold text-lg primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
+                   class="font-semibold leading-7 text-[1.10rem] primaryblue hover:bg-blue-700 hover:text-white hover:border-2 hover:border-blue-600 border-2 border-blue-500 px-10 py-[15px] rounded-full"
                 >
                   Apply Now
                 </button>
@@ -344,14 +345,16 @@
       </div>
     </section>
 
-    <!-- Features  -->
-    <section class="pt-[120px] pb-[90px]">
+    <!-- Features Section  -->
+    <section id="features" class="pt-[120px] pb-[90px]">
       <div class="container px-5 mx-auto">
-        <h2 class="text-9xl font-baloo-bhaijaan-2">
+        <h2 class="md:text-9xl text-5xl font-baloo-bhaijaan-2">
           Features Of Our Internships
         </h2>
-        <div class="mt-10 flex">
-          <div class="p-4 mb-20 feature-container">
+
+        <!-- fetaures -->
+        <div class="mt-10 flex sm:flex-row flex-col lg:flex-nowrap sm:flex-wrap">
+          <div class="p-4 lg:mb-20 feature-container">
             <div class="feature-icon w-full">
               <img src="icons/certificate.png" alt="certificate-image" />
             </div>
@@ -359,23 +362,23 @@
               Verified Certificates
             </p>
             <p
-              class="text-base mb-20 leading-6 text-gray-500 font-baloo-bhaijaan-2"
+              class="text-base  leading-6 text-gray-500 font-baloo-bhaijaan-2"
             >
               Get Verified Certificates to prove your hard work!
             </p>
           </div>
-          <div class="p-4 mb-20 feature-container">
+          <div class="p-4 lg:mb-20 feature-container">
             <div class="feature-icon w-full">
               <img src="icons/connection.png" alt="connection-image" />
             </div>
             <p class="font-bold text-[20px] mb-3 leading-7">Networking</p>
             <p
-              class="text-base mb-20 leading-6 text-gray-500 font-baloo-bhaijaan-2"
+              class="text-base  leading-6 text-gray-500 font-baloo-bhaijaan-2"
             >
               Tap into our network and increase your chances of placements.
             </p>
           </div>
-          <div class="p-4 mb-20 feature-container">
+          <div class="p-4 lg:mb-20 feature-container">
             <div class="feature-icon w-full">
               <img src="icons/experience.png" alt="connection-image" />
             </div>
@@ -383,12 +386,12 @@
               Hands-on experience
             </p>
             <p
-              class="text-base mb-20 leading-6 text-gray-500 font-baloo-bhaijaan-2"
+              class="text-base  leading-6 text-gray-500 font-baloo-bhaijaan-2"
             >
               Gain practical experience by working on real-world projects.
             </p>
           </div>
-          <div class="p-4 mb-20 feature-container">
+          <div class="p-4 lg:mb-20 feature-container">
             <div class="feature-icon w-full">
               <img src="icons/work.png" alt="connection-image" />
             </div>
@@ -396,7 +399,7 @@
               High Quality Content
             </p>
             <p
-              class="text-base mb-20 leading-6 text-gray-500 font-baloo-bhaijaan-2"
+              class="text-base  leading-6 text-gray-500 font-baloo-bhaijaan-2"
             >
               Great Content to prepare students for their future careers.
             </p>
@@ -405,7 +408,7 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- FAQs Section -->
     <section id="faqs" class="pt-[120px] pb-[90px]">
       <div class="container px-5 mx-auto">
         <p class="text-center font-semibold text-lg mb-[10px] primaryblue">
@@ -428,6 +431,176 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="">
+      <div class="contact_container_top py-[47px] sm:py-[120px]">
+        <div class="container px-5 mx-auto">
+          <h1 class="lg:text-8xl sm:text-5xl text-[3.5rem] font-bold font-baloo-bhaijaan-2 w-fit">
+            CONTACT US
+          </h1>
+          <p class="lg:text-4xl text-base font-medium font-baloo-bhaijaan-2 w-fit">
+            Let’s talk about Love to hear from you!
+          </p>
+        </div>
+      </div>
+
+      <div class="contact_container_bottom pb-10">
+      <div class="container px-5 mx-auto justify-between flex flex-col sm:flex-row">
+        <div class="contact_details flex lg:flex-row flex-col gap-[30px] sm:gap-[66px] lg:gap-0 justify-between sm:px-10  pt-[3rem] sm:pt-[4rem] lg:pt-32 w-9/12 ">
+          <div class="contact_card flex items-center h-fit">
+            <img src="icons/location.png" alt="location" class="h-[18px] sm:h-fit mr-4 sm:mr-6"/>
+            <div>
+              <h4 class="font-semibold text-base sm:text-lg sm:mb-[15px]">Our Location</h4>
+              <p class="text-base">Mumbai - 400018, Maharashta, India</p>
+            </div>
+          </div>
+          <div class="contact_card flex items-center h-fit">
+            <img src="icons/email.png" alt="email" class="h-[18px] sm:h-fit mr-4 sm:mr-6"/>
+            <div>
+              <h4 class="font-semibold text-base sm:text-lg sm:mb-[15px]">How Can We Help?</h4>
+              <p class="text-base">contact@prodigyinfotech.dev</p>
+            </div>
+          </div>
+        </div> 
+
+        <!-- form -->
+        <div class="p-5 lg:p-[45px] shadow-lg bg-transparent mt-10 sm:-mt-[200px] lg:-mt-[300px] h-fit">
+            <h1 class="font-semibold text-[17px] lg:text-[28px] mb-[10px] lg:mb-[30px]">
+              Send us a Message
+            </h1>
+            <form id="contactForm">
+              <div class="form-control flex flex-col mb-[25px]">
+                <label class="text-[12px]" for="name"
+                  >Full Name <span class="pl-1 text-gray-500">*</span></label
+                >
+                <input
+                required
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  class="outline-none font-semibold text-base border-b py-[6px] lg:py-[15px] bg-transparent placeholder:text-black"
+                />
+              </div>
+              <div class="form-control flex flex-col mb-[25px]">
+                <label class="text-[12px]" for="email"
+                  >Email<span class="pl-1 text-gray-500">*</span></label
+                >
+                <input
+                required
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="example@yourmail.com"
+                  class="outline-none font-semibold text-base border-b py-[6px] lg:py-[15px] bg-transparent placeholder:text-black"
+                />
+              </div>
+              <div class="form-control flex flex-col mb-[25px]">
+                <label class="text-[12px]" for="phone"
+                  >Phone<span class="pl-1 text-gray-500">*</span></label
+                >
+                <input
+                required
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="xxxxxxxx"
+                  class="outline-none font-semibold text-base border-b py-[6px] lg:py-[15px] bg-transparent placeholder:text-black"
+                />
+              </div>
+              <div class="form-control flex flex-col mb-[25px]">
+                <label class="text-[12px]" for="message"
+                  >Message</label
+                >
+                <textarea
+                  
+                  id="message"
+                  name="message"
+                  placeholder="Type your message here"
+                  class="outline-none font-semibold text-base border border-black bg-transparent placeholder:text-black"
+                >
+              </textarea>
+              </div>
+              <input
+              required
+                type="submit"
+                value="Send Message"
+                class="font-medium cursor-pointer outline-none text-base rounded-md bg-primaryblue py-[15px] px-[25px] text-white"
+              />
+            </form>
+          </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+<footer class="pt-[100px]">
+<div class="container px-5 mx-auto flex-wrap flex">
+    <div class="px-3 w-full sm:w-1/2 md:w-1/4">
+        <div class="flex items-center gap-2">
+            <img src="favicon.svg" alt="icons" class="h-14" />
+            <div>
+              <p class="text-lg text-white font-Merriweather font-[700]">PRODIGY</p>
+              <p class="text-lg text-white font-Merriweather font-[700]">INFOTECH</p>
+            </div>
+          </div>
+          <p class="text-white mt-4 text-base">An EdTech Startup built by a team of passionate educators and entrepreneurs who are committed to transforming the way people learn and grow.</p>
+    </div>
+
+    <!-- footer links -->
+    <div class="px-3 w-full sm:w-1/2 md:w-1/6 flex items-start md:items-center flex-col mb-[50px]">
+    <p class="text-white font-semibold text-lg mb-9" >About Us</p>
+    <ul>
+      <li class="footer-Links"><a href="#home">Home</a></li>
+      <li class="footer-Links"><a href="#features">Features</a></li>
+      <li class="footer-Links"><a href="#about">About</a></li>
+      <li class="footer-Links"><a href="#faqs">FAQs</a></li>
+    </ul>
+  </div>
+
+      <!-- footer links -->
+    <div class="px-3 w-full sm:w-1/2 md:w-1/6 flex items-start md:items-center flex-col mb-[50px]">
+    <p class="text-white font-semibold text-lg mb-9" >Social</p>
+    <ul>
+      <li class="footer-Links">Instagram</li>
+      <li class="footer-Links">Telegram</li>
+      <li class="footer-Links">Linkedin</li>
+      <li class="footer-Links">Twitter</li>
+    </ul>
+  </div>
+
+      <!-- footer links -->
+      <div class=" px-3 w-full sm:w-1/2 md:w-1/6 flex items-start md:items-center flex-col mb-[50px]">
+    <p class="text-white font-semibold text-lg mb-9" >Our Services</p>
+    <ul>
+      <li class="footer-Links">Internships</li>
+      <li class="footer-Links">Consulting</li>
+    </ul>
+  </div>
+
+      <!-- footer links -->
+      <div class="px-3 w-full sm:w-1/2 md:w-1/6 flex  flex-col">
+    <p class="text-white font-semibold text-lg mb-9" >Other Info</p>
+    <ul>
+      <li class="footer-Links">Address: Gandhi Nagar, Upper Worli, Worli, Mumbai - 400018</li>
+    </ul>
+  </div>
+</div>
+
+<hr class="bg-white h-0.5">
+
+<!-- footer bottom panel -->
+<div class="footer-panel container mx-auto px-5 py-9">
+<ul class="flex text-[#f3f4fe]">
+<li class="text-[15px] font-baloo-bhaijaan-2 font-semibold mr-[30px]">Privacy Policy</li>
+<li class="text-[15px] font-baloo-bhaijaan-2 font-semibold mr-[30px]">Code of Conduct</li>
+<li class="text-[15px] font-baloo-bhaijaan-2 font-semibold mr-[30px]">Terms & Condition</li>
+<li class="text-[15px] font-baloo-bhaijaan-2 font-semibold mr-[30px]">Returns</li>
+</ul>
+</div>
+</footer>
+
+    <!-- Js scripts -->
     <script src="js/script.js"></script>
     <script src="js/style.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
