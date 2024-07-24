@@ -10,7 +10,10 @@ const changeimage = (image) => {
 };
 
 document.body.querySelector("#bars").addEventListener("click", () => {
-  if (bar.src === "http://127.0.0.1:5500/Task%2001/icons/openbars.svg") {
+  const imgUrl = bar.src.split("/");
+  const barimg = imgUrl[imgUrl.length - 1];
+
+  if (barimg === "openbars.svg") {
     changeimage("icons/closebar.svg");
     drawer.style.display = "inline";
   } else {
